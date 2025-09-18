@@ -3,17 +3,17 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args:
       - 'build'
-      - '--tag=us-central1-docker.pkg.dev/$PROJECT_ID/travel-planner/python-app-travel:latest'
+      - '--tag=us-central1-docker.pkg.dev/$PROJECT_ID/travelplanner/python-app-travel:latest'
       - '--file=Dockerfile'
       - '.'
   # Push the container image to Artifact Registry
   - name: 'gcr.io/cloud-builders/docker'
     args:
       - 'push'
-      - 'us-central1-docker.pkg.dev/$PROJECT_ID/travel-planner/python-app-travel:latest'
+      - 'us-central1-docker.pkg.dev/$PROJECT_ID/travelplanner/python-app-travel:latest'
 
 # Specify where to store build logs for the service account
 logsBucket: 'gs://python-travel-planner'
 
 images:
-  - 'us-central1-docker.pkg.dev/$PROJECT_ID/travel-planner/python-app-travel:latest'
+  - 'us-central1-docker.pkg.dev/$PROJECT_ID/travelplanner/python-app-travel:latest'
