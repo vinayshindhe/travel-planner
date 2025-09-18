@@ -1,0 +1,83 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.chat-container {
+  width: 80%;
+  max-width: 1000px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.messages {
+  height: 600px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  align-items: flex-start; /* Align items to the top */
+}
+
+.message {
+  padding: 8px 12px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  word-break: break-word; /* Prevent long words from breaking the layout */
+}
+.message:nth-child(odd) {
+  background-color: #e8f1ff; /* Light gray for odd messages */
+}
+
+.message:nth-child(even) {
+  background-color: #ffffff; /* White for even messages */
+}
+
+.user-message {
+  background-color: #e2f0ff;
+  text-align: right;
+  justify-content: flex-end;
+}
+
+.agent-message {
+  background-color: #f9f9f9;
+  text-align: left;
+  justify-content: flex-start;
+}
+
+.message-logo {
+  width: 30px; /* Adjust as needed */
+  height: 30px; /* Adjust as needed */
+  border-radius: 50%; /* Make it a circle */
+  margin-right: 10px; /* Space between logo and text */
+}
+
+.message-form {
+  display: flex;
+}
+
+.message-form input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.message-form button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.message-form button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
