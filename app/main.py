@@ -39,6 +39,7 @@ active_sessions = {}
 async def start_agent_session(user_id, is_audio=False):
     """Starts an agent session"""
 
+    print(f"Starting agent session...is_audio={is_audio}")
     session_service = InMemorySessionService()
     
     # Create a Session
@@ -148,6 +149,7 @@ async def root():
 async def sse_endpoint(user_id: int, is_audio: str = "false"):
     """SSE endpoint for agent to client communication"""
 
+    print(f"Starting  session...is_audio={is_audio}")
     # Start agent session
     user_id_str = str(user_id)
     live_events, live_request_queue = await start_agent_session(user_id_str, is_audio == "true")

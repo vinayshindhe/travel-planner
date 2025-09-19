@@ -190,14 +190,14 @@ function startAudio() {
 
 // Start the audio only when the user clicked the button
 // (due to the gesture requirement for the Web Audio API)
-const startAudioButton = document.getElementById("startAudioButton");
-startAudioButton.addEventListener("click", () => {
-  startAudioButton.disabled = true;
-  startAudio();
-  is_audio = true;
-  eventSource.close(); // close current connection
-  connectSSE(); // reconnect with the audio mode
-});
+//const startAudioButton = document.getElementById("startAudioButton");
+//startAudioButton.addEventListener("click", () => {
+  //startAudioButton.disabled = true;
+  //startAudio();
+  //is_audio = true;
+  //eventSource.close(); // close current connection
+  //connectSSE(); // reconnect with the audio mode
+//});
 
 // Audio recorder handler
 function audioRecorderHandler(pcmData) {
