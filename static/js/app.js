@@ -27,7 +27,7 @@ function connectSSE() {
 
     // Enable the Send button
     //document.getElementById("sendButton").disabled = false;
-    addSubmitHandler();
+    //addSubmitHandler();
   };
 
   // Handle incoming messages
@@ -96,6 +96,7 @@ function connectSSE() {
     }, 5000);
   };
 }
+addSubmitHandler();
 connectSSE();
 
 // Add submit handler to the form
