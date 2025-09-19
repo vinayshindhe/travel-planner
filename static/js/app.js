@@ -26,7 +26,7 @@ function connectSSE() {
     //document.getElementById("messages").textContent = "Connection opened";
 
     // Enable the Send button
-    document.getElementById("sendButton").disabled = false;
+    //document.getElementById("sendButton").disabled = false;
     addSubmitHandler();
   };
 
@@ -100,6 +100,7 @@ connectSSE();
 
 // Add submit handler to the form
 function addSubmitHandler() {
+  console.log("inside addSubmitHandler");
   messageForm.onsubmit = function (e) {
     e.preventDefault();
     const message = messageInput.value;
